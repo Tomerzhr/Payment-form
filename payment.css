@@ -1,0 +1,259 @@
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(imgs/bg.jpg);
+}
+
+.container {
+  padding: 30px 0px;
+  position: fixed;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 800px;
+  min-height: 450px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: space-around;
+  transform: translate(-50%, -50%);
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50%;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.left-side p {
+  color: #575757;
+  margin-bottom: 50px;
+  font-size: 14px;
+}
+
+.left-side form label {
+  display: block;
+  font-size: 12px;
+  color: #575757;
+  padding: 3px;
+}
+
+.left-side form input {
+  text-transform: uppercase;
+  width: 100%;
+  border: unset;
+  background: #ffffff;
+  border-radius: 3px;
+  padding: 6px;
+  border-bottom: 1px solid #71c2cb;
+}
+
+.left-side form input:focus {
+  outline: none;
+}
+
+form input:nth-child(4) {
+  background-image: url(imgs/visa.png);
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  background-size: 33px;
+  background-position: left;
+  background-color: #ffffff;
+  padding: 6px 6px 6px 40px;
+  width: 90%;
+}
+
+.discount-code {
+  position: relative;
+}
+
+.DiscountCode_btn {
+  display: none;
+  cursor: pointer;
+  border: none;
+  right: 3px;
+  position: absolute;
+  top: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #71c2cb;
+  background: white;
+}
+
+.form-flex {
+  display: flex;
+  gap: 16px;
+}
+
+.left-side form .form-flex input {
+  width: 100%;
+}
+
+.left-side form .formBtn {
+  display: block;
+  margin: 20px 0;
+  background: #4598a2;
+  border: unset;
+  padding: 7px 40px;
+  border-radius: 5px;
+  color: white;
+  font-size: 13px;
+  transition: 0.4s;
+}
+
+.left-side form .formBtn:enabled:hover {
+  transform: scale(105%);
+}
+
+.left-side form .formBtn:disabled {
+  background: #71c2cb8e;
+}
+
+.right-side {
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  padding: 40px 20px;
+  width: 200px;
+}
+
+.dataBox p,
+h2 {
+  position: relative;
+  z-index: 1;
+}
+
+h2 {
+  font-size: 35px;
+  margin-bottom: 62px;
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.prices p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.data {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.data span {
+  font-size: 11px;
+  font-weight: 300;
+  display: block;
+  margin-bottom: 20px;
+}
+
+hr {
+  margin: 30px 0px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.total-price {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.calculation {
+  font-weight: 300;
+}
+
+.decoration-color {
+  position: absolute;
+  background: #71c2cb;
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  filter: blur(33px);
+  top: 10px;
+  left: 30%;
+  z-index: 0;
+  animation: myAnim 15s ease 0s infinite normal forwards;
+}
+
+.completePorches {
+  display: none;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: #58aab3;
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 820px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    top: 3vh;
+    left: 5vw;
+    transform: none;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .left-side {
+    width: 85%;
+  }
+
+  .right-side {
+    width: 80%;
+  }
+
+  form input:nth-child(4) {
+    width: 89%;
+  }
+}

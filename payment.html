@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="payment" />
+    <meta name="description" content="Please enter your credit card details to complete your porches." />
+    <!-- google-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="payment.css" />
+    <title>PaymentForm</title>
+  </head>
+
+  <body>
+    <main>
+      <section class="container">
+        <p class="completePorches">Thank You, See you on your next porches.</p>
+        <article class="left-side">
+          <h1>Let’s Make Payment</h1>
+          <p>
+            To start your subscription, input your card details to make payment. You will be redirected to your banks
+            authorization page.
+          </p>
+
+          <form id="formData" action="index.html">
+            <label for="holderName">Cardholder’s Name</label>
+            <input type="text" class="required" name="holder-name" id="holderName" placeholder="TOMER ZOHAR" />
+
+            <label for="CardNumber">Card Number </label>
+            <input
+              type="text"
+              class="required"
+              name="card-number"
+              id="CardNumber"
+              maxlength="19"
+              placeholder="9870 3456 7890 6473" />
+
+            <div class="form-flex">
+              <div>
+                <label for="Expiry">Expiry</label>
+                <input type="text" class="required" name="expiry" id="Expiry" placeholder="00/00" maxlength="5" />
+              </div>
+              <div>
+                <label for="CVC">CVC</label>
+                <input type="text" class="required" name="cvc" maxlength="4" id="CVC" placeholder="654" />
+              </div>
+            </div>
+
+            <label for="Discount">Discount Code</label>
+            <div class="discount-code">
+              <input type="text" name="DiscountCode" id="Discount" placeholder="DISCOUNT-20-OFFER" />
+              <button class="DiscountCode_btn" type="submit">Apply</button>
+            </div>
+
+            <button class="formBtn" id="formButton" type="submit">Pay</button>
+          </form>
+        </article>
+
+        <article class="right-side">
+          <div class="dataBox">
+            <p>You’re paying,</p>
+            <h2>$450.00</h2>
+
+            <div class="data">
+              <div class="items">
+                <p>Custom Gucci Shoes</p>
+                <span>Size: m Color: Red</span>
+
+                <p>Nivea Cream 400ml</p>
+                <span>Size: m Color: Blue</span>
+
+                <p>Discounts & Offers</p>
+              </div>
+
+              <div class="prices calculation">
+                <p>$ 400.00</p>
+                <p>$ 50.00</p>
+                <p>$ 0.00</p>
+              </div>
+            </div>
+
+            <hr />
+
+            <div class="total">
+              <div class="name">
+                <p>Discount</p>
+                <p>Sub Total</p>
+                <p>Total</p>
+              </div>
+
+              <div class="total-price calculation">
+                <p class="discountPercent">0.00%</p>
+                <p class="subTotal">$450.00</p>
+                <p class="totalAmount">$450.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="decoration-color"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="payment.js"></script>
+  </body>
+</html>
